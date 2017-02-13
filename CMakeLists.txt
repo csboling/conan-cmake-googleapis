@@ -1,6 +1,9 @@
 project(conan-googleapis)
 cmake_minimum_required(VERSION 3.0.1)
 
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
 find_package(Protobuf 3 REQUIRED)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/CMake")
 find_package(GRPC REQUIRED)
